@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hiroyukigpu-image-convert-cli"
+version = "1.0.0"
+description = "PNG・JPEG・WebP・AVIFを一括変換します。"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "HiroyukiGPU"}]
+dependencies = ["Pillow>=11.3,<13"]
+
+[project.scripts]
+image-convert = "image_convert_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["image_convert_cli*"]
